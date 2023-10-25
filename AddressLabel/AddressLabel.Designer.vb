@@ -204,7 +204,7 @@ Partial Class AddressLabel
         Me.ExitButton.Name = "ExitButton"
         Me.ExitButton.Size = New System.Drawing.Size(145, 64)
         Me.ExitButton.TabIndex = 17
-        Me.ExitButton.Text = "&Exit"
+        Me.ExitButton.Text = "E&xit"
         Me.ExitButton.UseVisualStyleBackColor = True
         '
         'AddressLabel

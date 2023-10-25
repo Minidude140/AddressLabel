@@ -4,13 +4,27 @@
 'Address Label
 'https://github.com/Minidude140/AddressLabel.git
 Public Class AddressLabel
-    'Custom Subs
+    'Custom Methods
     ''' <summary>
-    ''' Sets the Default State of Labels and Text Boxes
+    ''' Clears any data entered in the text boxes
+    ''' </summary>
+    Sub CLearTextBoxes()
+        FirstNameTextBox.Text = ""
+        LastNameTextBox.Text = ""
+        StreetAddressTextBox.Text = ""
+        CityTextBox.Text = ""
+        StateTextBox.Text = ""
+        ZipTextBox.Text = ""
+    End Sub
+
+    ''' <summary>
+    ''' Sets the Default State of Display Label and Text Boxes
     ''' </summary>
     Sub SetDefaults()
         DisplayLabel.Text = "Address Will Display Here"
+        CLearTextBoxes()
     End Sub
+
     'Event Handlers
     Private Sub AddressLabel_Load(sender As Object, e As EventArgs) Handles Me.Load
         SetDefaults()
@@ -22,5 +36,6 @@ Public Class AddressLabel
 
     Private Sub ClearButton_Click(sender As Object, e As EventArgs) Handles ClearButton.Click
         SetDefaults()
+        CLearTextBoxes()
     End Sub
 End Class
