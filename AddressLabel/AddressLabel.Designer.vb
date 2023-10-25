@@ -40,8 +40,10 @@ Partial Class AddressLabel
         Me.DisplayButton = New System.Windows.Forms.Button()
         Me.ClearButton = New System.Windows.Forms.Button()
         Me.ExitButton = New System.Windows.Forms.Button()
+        Me.ButtonsGroupBox = New System.Windows.Forms.GroupBox()
         Me.InputGroupBox.SuspendLayout()
         Me.OutputGroupBox.SuspendLayout()
+        Me.ButtonsGroupBox.SuspendLayout()
         Me.SuspendLayout()
         '
         'FirstNameTextBox
@@ -65,7 +67,7 @@ Partial Class AddressLabel
         Me.LastNameTextBox.Location = New System.Drawing.Point(26, 108)
         Me.LastNameTextBox.Name = "LastNameTextBox"
         Me.LastNameTextBox.Size = New System.Drawing.Size(231, 22)
-        Me.LastNameTextBox.TabIndex = 2
+        Me.LastNameTextBox.TabIndex = 1
         '
         'LastNameLabel
         '
@@ -90,7 +92,7 @@ Partial Class AddressLabel
         Me.StreetAddressTextBox.Location = New System.Drawing.Point(26, 153)
         Me.StreetAddressTextBox.Name = "StreetAddressTextBox"
         Me.StreetAddressTextBox.Size = New System.Drawing.Size(231, 22)
-        Me.StreetAddressTextBox.TabIndex = 5
+        Me.StreetAddressTextBox.TabIndex = 2
         '
         'CityLabel
         '
@@ -106,7 +108,7 @@ Partial Class AddressLabel
         Me.CityTextBox.Location = New System.Drawing.Point(26, 198)
         Me.CityTextBox.Name = "CityTextBox"
         Me.CityTextBox.Size = New System.Drawing.Size(231, 22)
-        Me.CityTextBox.TabIndex = 7
+        Me.CityTextBox.TabIndex = 3
         '
         'StateLabel
         '
@@ -122,7 +124,7 @@ Partial Class AddressLabel
         Me.StateTextBox.Location = New System.Drawing.Point(26, 243)
         Me.StateTextBox.Name = "StateTextBox"
         Me.StateTextBox.Size = New System.Drawing.Size(231, 22)
-        Me.StateTextBox.TabIndex = 9
+        Me.StateTextBox.TabIndex = 4
         '
         'ZipLabel
         '
@@ -138,7 +140,7 @@ Partial Class AddressLabel
         Me.ZipTextBox.Location = New System.Drawing.Point(26, 288)
         Me.ZipTextBox.Name = "ZipTextBox"
         Me.ZipTextBox.Size = New System.Drawing.Size(231, 22)
-        Me.ZipTextBox.TabIndex = 11
+        Me.ZipTextBox.TabIndex = 5
         '
         'InputGroupBox
         '
@@ -157,16 +159,17 @@ Partial Class AddressLabel
         Me.InputGroupBox.Location = New System.Drawing.Point(24, 23)
         Me.InputGroupBox.Name = "InputGroupBox"
         Me.InputGroupBox.Size = New System.Drawing.Size(285, 338)
-        Me.InputGroupBox.TabIndex = 12
+        Me.InputGroupBox.TabIndex = 0
         Me.InputGroupBox.TabStop = False
         Me.InputGroupBox.Text = "Mailing Address"
         '
         'DisplayLabel
         '
         Me.DisplayLabel.AutoSize = True
+        Me.DisplayLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.DisplayLabel.Location = New System.Drawing.Point(6, 34)
         Me.DisplayLabel.Name = "DisplayLabel"
-        Me.DisplayLabel.Size = New System.Drawing.Size(153, 17)
+        Me.DisplayLabel.Size = New System.Drawing.Size(204, 20)
         Me.DisplayLabel.TabIndex = 13
         Me.DisplayLabel.Text = "Adress Displayed Here"
         '
@@ -182,39 +185,48 @@ Partial Class AddressLabel
         '
         'DisplayButton
         '
-        Me.DisplayButton.Location = New System.Drawing.Point(331, 296)
+        Me.DisplayButton.Location = New System.Drawing.Point(14, 20)
         Me.DisplayButton.Name = "DisplayButton"
         Me.DisplayButton.Size = New System.Drawing.Size(145, 64)
-        Me.DisplayButton.TabIndex = 15
+        Me.DisplayButton.TabIndex = 0
         Me.DisplayButton.Text = "&Display Label"
         Me.DisplayButton.UseVisualStyleBackColor = True
         '
         'ClearButton
         '
-        Me.ClearButton.Location = New System.Drawing.Point(482, 297)
+        Me.ClearButton.Location = New System.Drawing.Point(165, 21)
         Me.ClearButton.Name = "ClearButton"
         Me.ClearButton.Size = New System.Drawing.Size(145, 64)
-        Me.ClearButton.TabIndex = 16
+        Me.ClearButton.TabIndex = 1
         Me.ClearButton.Text = "&Clear"
         Me.ClearButton.UseVisualStyleBackColor = True
         '
         'ExitButton
         '
-        Me.ExitButton.Location = New System.Drawing.Point(633, 297)
+        Me.ExitButton.Location = New System.Drawing.Point(316, 21)
         Me.ExitButton.Name = "ExitButton"
         Me.ExitButton.Size = New System.Drawing.Size(145, 64)
-        Me.ExitButton.TabIndex = 17
+        Me.ExitButton.TabIndex = 2
         Me.ExitButton.Text = "E&xit"
         Me.ExitButton.UseVisualStyleBackColor = True
+        '
+        'ButtonsGroupBox
+        '
+        Me.ButtonsGroupBox.Controls.Add(Me.ExitButton)
+        Me.ButtonsGroupBox.Controls.Add(Me.ClearButton)
+        Me.ButtonsGroupBox.Controls.Add(Me.DisplayButton)
+        Me.ButtonsGroupBox.Location = New System.Drawing.Point(315, 283)
+        Me.ButtonsGroupBox.Name = "ButtonsGroupBox"
+        Me.ButtonsGroupBox.Size = New System.Drawing.Size(473, 102)
+        Me.ButtonsGroupBox.TabIndex = 1
+        Me.ButtonsGroupBox.TabStop = False
         '
         'AddressLabel
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 397)
-        Me.Controls.Add(Me.ExitButton)
-        Me.Controls.Add(Me.ClearButton)
-        Me.Controls.Add(Me.DisplayButton)
+        Me.Controls.Add(Me.ButtonsGroupBox)
         Me.Controls.Add(Me.OutputGroupBox)
         Me.Controls.Add(Me.InputGroupBox)
         Me.Name = "AddressLabel"
@@ -223,6 +235,7 @@ Partial Class AddressLabel
         Me.InputGroupBox.PerformLayout()
         Me.OutputGroupBox.ResumeLayout(False)
         Me.OutputGroupBox.PerformLayout()
+        Me.ButtonsGroupBox.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
@@ -245,4 +258,5 @@ Partial Class AddressLabel
     Friend WithEvents DisplayButton As Button
     Friend WithEvents ClearButton As Button
     Friend WithEvents ExitButton As Button
+    Friend WithEvents ButtonsGroupBox As GroupBox
 End Class

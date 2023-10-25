@@ -38,4 +38,5 @@ Public Class AddressLabel
         SetDefaults()
         CLearTextBoxes()
     End Sub
+
 End Class
