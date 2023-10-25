@@ -41,24 +41,30 @@ Public Class AddressLabel
     ''' Updates the Display Label 
     ''' </summary>
     Sub UpdateDisplay()
-        DisplayLabel.Text = ConcatenateNames(FirstNameTextBox.Text, LastNameTextBox.Text)
+        DisplayLabel.Text = ConcatenateNames(FirstNameTextBox.Text, LastNameTextBox.Text) & vbCrLf &
+                            StreetAddressTextBox.Text & vbCrLf &
+                            $"{CityTextBox.Text}, {StateTextBox.Text} {ZipTextBox.Text}"
+
     End Sub
 
     'Event Handlers
     Private Sub AddressLabel_Load(sender As Object, e As EventArgs) Handles Me.Load
+        'Sets defaults on startup
         SetDefaults()
     End Sub
 
     Private Sub ExitButton_Click(sender As Object, e As EventArgs) Handles ExitButton.Click
+        'Closes application
         Me.Close()
     End Sub
 
     Private Sub ClearButton_Click(sender As Object, e As EventArgs) Handles ClearButton.Click
+        'Sets defaults when cleared
         SetDefaults()
-        CLearTextBoxes()
     End Sub
 
     Private Sub DisplayButton_Click(sender As Object, e As EventArgs) Handles DisplayButton.Click
+        'Updates Display Label
         UpdateDisplay()
     End Sub
 End Class
