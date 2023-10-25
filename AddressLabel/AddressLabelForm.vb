@@ -3,7 +3,7 @@
 'Fall 2023
 'Address Label
 'https://github.com/Minidude140/AddressLabel.git
-Public Class AddressLabel
+Public Class AddressLabelForm
     'Custom Methods
     ''' <summary>
     ''' Clears any data entered in the text boxes
