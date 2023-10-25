@@ -25,6 +25,25 @@ Public Class AddressLabel
         CLearTextBoxes()
     End Sub
 
+    ''' <summary>
+    ''' Inputs two strings and concatenates with a space in between
+    ''' </summary>
+    ''' <param name="First"></param>
+    ''' <param name="Second"></param>
+    ''' <returns></returns>
+    Function ConcatenateNames(First As String, Second As String) As String
+        Dim fullName As String
+        fullName = $"{First} {Second}"
+        Return fullName
+    End Function
+
+    ''' <summary>
+    ''' Updates the Display Label 
+    ''' </summary>
+    Sub UpdateDisplay()
+        DisplayLabel.Text = ConcatenateNames(FirstNameTextBox.Text, LastNameTextBox.Text)
+    End Sub
+
     'Event Handlers
     Private Sub AddressLabel_Load(sender As Object, e As EventArgs) Handles Me.Load
         SetDefaults()
@@ -39,4 +58,7 @@ Public Class AddressLabel
         CLearTextBoxes()
     End Sub
 
+    Private Sub DisplayButton_Click(sender As Object, e As EventArgs) Handles DisplayButton.Click
+        UpdateDisplay()
+    End Sub
 End Class
