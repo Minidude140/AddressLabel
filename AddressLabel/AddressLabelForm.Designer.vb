@@ -22,6 +22,7 @@ Partial Class AddressLabelForm
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Me.FirstNameTextBox = New System.Windows.Forms.TextBox()
         Me.FirstNameLabel = New System.Windows.Forms.Label()
         Me.LastNameTextBox = New System.Windows.Forms.TextBox()
@@ -41,6 +42,7 @@ Partial Class AddressLabelForm
         Me.ClearButton = New System.Windows.Forms.Button()
         Me.ExitButton = New System.Windows.Forms.Button()
         Me.ButtonsGroupBox = New System.Windows.Forms.GroupBox()
+        Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
         Me.InputGroupBox.SuspendLayout()
         Me.OutputGroupBox.SuspendLayout()
         Me.ButtonsGroupBox.SuspendLayout()
@@ -162,6 +164,7 @@ Partial Class AddressLabelForm
         Me.InputGroupBox.TabIndex = 0
         Me.InputGroupBox.TabStop = False
         Me.InputGroupBox.Text = "Mailing Address"
+        Me.ToolTip1.SetToolTip(Me.InputGroupBox, "Input your information")
         '
         'DisplayLabel
         '
@@ -169,9 +172,9 @@ Partial Class AddressLabelForm
         Me.DisplayLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.DisplayLabel.Location = New System.Drawing.Point(6, 34)
         Me.DisplayLabel.Name = "DisplayLabel"
-        Me.DisplayLabel.Size = New System.Drawing.Size(204, 20)
+        Me.DisplayLabel.Size = New System.Drawing.Size(214, 20)
         Me.DisplayLabel.TabIndex = 13
-        Me.DisplayLabel.Text = "Adress Displayed Here"
+        Me.DisplayLabel.Text = "Address Displayed Here"
         '
         'OutputGroupBox
         '
@@ -182,6 +185,7 @@ Partial Class AddressLabelForm
         Me.OutputGroupBox.TabIndex = 14
         Me.OutputGroupBox.TabStop = False
         Me.OutputGroupBox.Text = "Address Label"
+        Me.ToolTip1.SetToolTip(Me.OutputGroupBox, "Address Display")
         '
         'DisplayButton
         '
@@ -190,6 +194,7 @@ Partial Class AddressLabelForm
         Me.DisplayButton.Size = New System.Drawing.Size(145, 64)
         Me.DisplayButton.TabIndex = 0
         Me.DisplayButton.Text = "&Display Label"
+        Me.ToolTip1.SetToolTip(Me.DisplayButton, "Displays the information provided above")
         Me.DisplayButton.UseVisualStyleBackColor = True
         '
         'ClearButton
@@ -199,6 +204,7 @@ Partial Class AddressLabelForm
         Me.ClearButton.Size = New System.Drawing.Size(145, 64)
         Me.ClearButton.TabIndex = 1
         Me.ClearButton.Text = "&Clear"
+        Me.ToolTip1.SetToolTip(Me.ClearButton, "CLear display and text boxes")
         Me.ClearButton.UseVisualStyleBackColor = True
         '
         'ExitButton
@@ -208,6 +214,7 @@ Partial Class AddressLabelForm
         Me.ExitButton.Size = New System.Drawing.Size(145, 64)
         Me.ExitButton.TabIndex = 2
         Me.ExitButton.Text = "E&xit"
+        Me.ToolTip1.SetToolTip(Me.ExitButton, "Exit the Program")
         Me.ExitButton.UseVisualStyleBackColor = True
         '
         'ButtonsGroupBox
@@ -221,7 +228,7 @@ Partial Class AddressLabelForm
         Me.ButtonsGroupBox.TabIndex = 1
         Me.ButtonsGroupBox.TabStop = False
         '
-        'AddressLabel
+        'AddressLabelForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -229,7 +236,7 @@ Partial Class AddressLabelForm
         Me.Controls.Add(Me.ButtonsGroupBox)
         Me.Controls.Add(Me.OutputGroupBox)
         Me.Controls.Add(Me.InputGroupBox)
-        Me.Name = "AddressLabel"
+        Me.Name = "AddressLabelForm"
         Me.Text = "Adress Label Viewer"
         Me.InputGroupBox.ResumeLayout(False)
         Me.InputGroupBox.PerformLayout()
@@ -259,4 +266,5 @@ Partial Class AddressLabelForm
     Friend WithEvents ClearButton As Button
     Friend WithEvents ExitButton As Button
     Friend WithEvents ButtonsGroupBox As GroupBox
+    Friend WithEvents ToolTip1 As ToolTip
 End Class
